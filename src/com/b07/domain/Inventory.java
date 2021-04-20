@@ -1,0 +1,43 @@
+package com.b07.domain;
+
+import java.util.Map;
+
+public interface Inventory {
+  /**
+   * Returns the map of all the items and the quantity of each item in stock.
+   * 
+   * @return the itemMap
+   */
+  public Map<Item, Integer> getItemMap();
+
+  /**
+   * Sets the map of all the items and the quantity of each item in stock.
+   * 
+   * @param itemMap the map of all the items and the quantity of each item in stock.
+   */
+  public void setItemMap(Map<Item, Integer> itemMap);
+
+  /**
+   * Updates the quantity of the specified item with the specified value, or adds the item if it
+   * does not exist in the map prior.
+   * 
+   * @param item the item to update.
+   * @param value the number of the item in stock.
+   */
+  public void updateMap(Item item, Integer value);
+
+  /**
+   * Returns the total number of items in stock.
+   * 
+   * @return the total number of items in stock.
+   */
+  public int getTotalItems();
+
+  /**
+   * Sets the total number of items in stock.
+   * 
+   * @param total the total number of items in stock.
+   */
+  public void setTotalItems(int total);
+
+}
